@@ -1,0 +1,79 @@
+.shop {
+  width: 100%;
+}
+.shopTitle {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.shopTitle h2 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.shopTitle p {
+  margin: 5px 0;
+}
+
+.products {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+.product {
+  border-radius: 15px;
+  height: 350px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+}
+
+.product img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.product .description {
+  text-align: center;
+}
+
+.product:hover {
+  transition: 0.3s ease-in;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(121, 121, 121, 0.3);
+}
+
+.addToCartBttn {
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  border: 2px solid rgb(19, 19, 19);
+  min-width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+
+.addToCartBttn:hover {
+  background-color: rgb(19, 19, 19);
+  color: white;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
