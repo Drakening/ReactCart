@@ -1,14 +1,20 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
 
-//CartItem component is responsible for rendering individual items within the shopping cart. 
-//It displays the product image, name, price, and provides buttons to adjust the quantity in the cart.
+// CartItem component renders individual items within the shopping cart.
+// It displays the product image, name, price, and provides buttons to adjust the quantity in the cart.
 export const CartItem = (props) => {
-  //Destructuring values from the props.data object.
+  // Destructuring rom the props.data object.
   const { id, productName, price, productImage } = props.data;
-  // Destructuring values from the ShopContext.
+
+  // Destructuring from the ShopContext.
   const { cartItems, addToCart, removeFromCart, updateCartItemCount } =
     useContext(ShopContext);
+
+  //handles the removing of specific item from the cart.
+  const handleClearItem = () => {
+    updateCartItemCount(0, id);
+  };
 
   return (
     <div className="cartItem">
@@ -26,7 +32,9 @@ export const CartItem = (props) => {
           <button onClick={() => addToCart(id)}> + </button>
         </div>
         <p className="price-x"> Price: R{price}</p>
-        
+        <button onClick={handleClearItem} className="clear-item-button">
+          Delete
+        </button>
       </div>
     </div>
   );
